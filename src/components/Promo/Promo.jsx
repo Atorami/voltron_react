@@ -1,5 +1,5 @@
 import React from "react";
-rimpot { Carousel} from "flowbite-react";
+import { Carousel } from "flowbite-react";
 import ServiceCard from "../Cards/ServiceCard";
 import ind1 from "../../assets/img/industrial/1.png";
 import ind2 from "../../assets/img/industrial/2.png";

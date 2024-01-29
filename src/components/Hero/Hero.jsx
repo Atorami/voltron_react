@@ -1,29 +1,28 @@
-import React, { useState, useEffect } from "react";
-import MarineBg from "../../assets/img/marine_bg.png";
-import IndustrialBg from "../../assets/img/industrial_bg.png";
-import "./Hero.css"; // Import a separate CSS file for styles (Hero.css)
+import React from "react";
+import bg_img from "../../assets/img/hero_bg.png";
+import Button from "../Buttons/Button";
 
 const Hero = () => {
   return (
-    <section
-      className="bg-blue-500 text-white py-20"
-      style={{
-        backgroundImage: 'url("your-background-image.jpg")',
-        backgroundSize: "cover",
-      }}
-    >
-      <div className="container mx-auto text-center">
-        <h1 className="text-5xl font-extrabold mb-4">MARINE & INDUSTRIAL</h1>
-        <h1 className="text-5xl font-extrabold mb-8">
-          ELECTRICAL AND AUTOMATION
+    <section className="relative h-[1100px] overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${bg_img})`,
+          filter: "blur(1.5px)",
+        }}
+      ></div>
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="relative flex flex-col justify-center items-center h-full text-white px-16">
+        <h1 className="text-8xl pb-4 text-center">
+          <span className="text-title_blue font-semibold">Marine</span> & {""}
+          <span className="text-title_red font-semibold">Industrial</span>{" "}
         </h1>
-        <p className="text-lg mb-8">
-          Leading the way in innovative solutions for automation and
-          electronics.
-        </p>
-        <button className="bg-white text-blue-500 hover:bg-blue-100 py-2 px-4 rounded-full">
-          Explore Our Services
-        </button>
+        <h2 className="text-4xl pb-16 text-center">
+          <span className="">Electrical</span> and{" "}
+          <span className="">Automation</span>
+        </h2>
+        <Button className="" title="Explore our services" />
       </div>
     </section>
   );

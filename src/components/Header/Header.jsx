@@ -1,47 +1,33 @@
 import React from "react";
-import { Navbar, Dropdown, DropdownItem } from "flowbite-react";
-import logo from "../../assets/img/Voltron_logo.png"; // Assuming Flowbite components
+import logo from "../../assets/img/Voltron_logo.png";
 
 const Header = () => {
+  const navigationArr = ["Home", "About Us", "Services", "Contact"];
+
   return (
-    <header>
-      <div className="text-white p-2">
-        <div className="container mx-auto flex justify-between items-center">
-          <Dropdown label="Language">
-            <DropdownItem href="#">English</DropdownItem>
-            <DropdownItem href="#">Español</DropdownItem>
-          </Dropdown>
-
-          <div className="flex flex-row">
-            <div className="flex items-center space-x-4 pr-10">
-              <span>Phone: +123456789</span>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <span>Email: voltron@voltron.com.pl</span>
-            </div>
-          </div>
-        </div>
+    <header className="fixed h-[80px] w-full z-10 bg-gray-100 bg-opacity-10">
+      <div className="w-full h-full px-16 py-5 flex flex-row justify-between items-center">
+        <img
+          src={logo}
+          alt="Voltron"
+          className="h-16 opacity-85"
+          style={{
+            filter: "invert(1)",
+          }}
+        />
+        <nav>
+          <ul className="w-full flex flex-row justify-between text-white">
+            {navigationArr.map((el, index) => (
+              <li
+                key={index}
+                className="pr-10 text-xl font-normal hover:font-bold transition-all duration-100 ease-linear"
+              >
+                <a href="#">{el}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-
-      <Navbar fluid rounded className="bg-gray-100 text-white p-2">
-        <Navbar.Brand>
-          <img src={logo} alt="Voltron" className="h-16" />
-        </Navbar.Brand>
-
-        <Navbar.Collapse className="hidden md:flex">
-          <Navbar.Link href="#" active>
-            Home
-          </Navbar.Link>
-          <Navbar.Link href="#">About Us</Navbar.Link>
-          <Navbar.Link href="#">Services</Navbar.Link>
-          <Navbar.Link href="#">Contact</Navbar.Link>
-        </Navbar.Collapse>
-
-        <div className="md:hidden">
-          <Navbar.Toggle />
-        </div>
-      </Navbar>
     </header>
   );
 };

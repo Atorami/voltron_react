@@ -5,6 +5,7 @@ export default {
     "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
   theme: {
+    colors: { title_red: "#FE0000", title_blue: "#2196F3" },
     extend: {},
   },
   plugins: [require("flowbite/plugin")],
