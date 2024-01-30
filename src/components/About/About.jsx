@@ -1,26 +1,53 @@
 import React from "react";
+import { Fade } from "react-reveal";
+import bg_img_about from "../../assets/img/about_bg.jpg";
 
 const About = () => {
   return (
-    <section className="bg-white py-16" id="about">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-4xl font-extrabold mb-6">About Us</h2>
-        <p className="text-lg mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-          convallis nisl nec aliquet lacinia. Sed at metus non mi luctus
-          efficitur eu at nulla. Curabitur fermentum dapibus leo, ac vulputate
-          massa. Ut vel orci vitae velit interdum mattis.
-        </p>
-        <p className="text-lg mb-8">
-          Fusce vel elit sit amet metus fringilla iaculis. Nulla facilisi.
-          Suspendisse potenti. Nunc sagittis risus quis tincidunt commodo. Sed
-          auctor ligula in tristique aliquet.
-        </p>
-        <p className="text-lg">
-          Phasellus tincidunt, velit ut rhoncus fermentum, sem mi bibendum
-          libero, vel commodo mi dolor eu nisl. Sed luctus dolor eu nulla
-          malesuada vulputate.
-        </p>
+    <section id="about" className="h-[800px] overflow-hidden bg-white">
+      <div className="flex flex-col md:flex-row h-full px-16 items-center">
+        <Fade left duration={2000} delay={200}>
+          {" "}
+          <div className="md:w-1/2 px-16">
+            <h2 className="text-6xl font-semibold mb-8">About Us</h2>
+            <img src={bg_img_about} alt="" className="rounded-r rounded-3xl" />
+          </div>
+        </Fade>
+
+        <div className="flex flex-col justify-center items-center h-full pt-20">
+          <Fade right duration={2000}>
+            {" "}
+            <p className="text-xl">
+              Welcome to <span className="text-2xl font-semibold">Voltron</span>
+              , your partner in delivering top-notch maritime and industrial
+              electrical and automation solutions. With a focus on innovation
+              and excellence, we take pride in our dedicated team and commitment
+              to meeting the unique needs of our clients.
+            </p>
+            <p className="text-xl mt-4">
+              Our headquarters in Szczecin, strategically located near the
+              Baltic Sea, positions us to efficiently serve the maritime
+              industry. At
+              <span> Voltron</span>, we understand the critical importance of
+              reliable electrical systems and advanced automation in maritime
+              and industrial operations.
+            </p>
+            <p className="text-xl mt-4">
+              Our team of highly skilled professionals is equipped to handle
+              complex challenges, from designing electrical systems for marine
+              vessels to implementing cutting-edge automation solutions for
+              industrial facilities. We strive for operational excellence and
+              are dedicated to delivering tailored solutions that exceed
+              expectations.
+            </p>
+            <p className="text-xl mt-4">
+              Explore the world of marine and industrial electrical excellence
+              with <span> Voltron</span>. Contact us today to discuss your
+              project and discover how our commitment to quality and innovation
+              can elevate your operations.
+            </p>
+          </Fade>
+        </div>
       </div>
     </section>
   );
