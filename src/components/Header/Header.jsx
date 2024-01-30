@@ -18,11 +18,13 @@ const Header = () => {
         <nav>
           <ul className="w-full flex flex-row justify-between text-white">
             {navigationArr.map((el, index) => (
-              <li
-                key={index}
-                className="pr-10 text-xl font-normal hover:font-bold transition-all duration-100 ease-linear"
-              >
-                <a href="#">{el}</a>
+              <li key={index} className="pr-10 text-xl font-normal">
+                <a
+                  href="#"
+                  className=" hover:font-bold transition-all duration-100 ease-linear"
+                >
+                  {el}
+                </a>
               </li>
             ))}
           </ul>
