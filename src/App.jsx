@@ -9,7 +9,7 @@ import Stats from "./components/Stats/Stats";
 
 export default function App() {
   return (
-    <div className="bg-black">
+    <div className="bg-white">
       <Header />
       <Hero />
       <About />
