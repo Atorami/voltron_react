@@ -1,31 +1,24 @@
 import React from "react";
+import logo from "../../assets/img/Voltron_logo.png";
 
 const Footer = () => {
   return (
-    <footer className=" text-white py-8 bg-black">
-      <div className="container mx-auto text-center">
-        <p className="text-lg mb-4">Stay connected with us:</p>
-        <div className="flex justify-center space-x-4">
-          <a
-            href="#"
-            className="text-blue-500 hover:text-blue-300 transition duration-300"
-          >
-            Facebook
-          </a>
-          <a
-            href="#"
-            className="text-blue-500 hover:text-blue-300 transition duration-300"
-          >
-            Twitter
-          </a>
-          <a
-            href="#"
-            className="text-blue-500 hover:text-blue-300 transition duration-300"
-          >
-            Instagram
-          </a>
+    <footer className="bg-gray-700 text-white py-6">
+      <div className="container mx-auto">
+        <div className="flex flex-col">
+          <div className="w-40">
+            <a href="">
+              {" "}
+              <img src={logo} alt="Voltron" />
+            </a>
+          </div>
+          <div className="flex flex-row justify-between items-center pt-4">
+            <p>© 2024 Voltron. All rights reserved.</p>
+            <p>
+              Created by <a href="#"> AM </a>
+            </p>
+          </div>
         </div>
-        <p className="mt-4">© 2024 Your Company. All rights reserved.</p>
       </div>
     </footer>
   );
