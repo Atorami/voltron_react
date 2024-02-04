@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed h-[80px] w-full z-10 px-16 py-5 flex flex-row justify-between items-center ${
+      className={`fixed h-[80px] w-full z-10 px-16 py-5 flex flex-row justify-between items-center transition-all duration-300 ${
         scrolled ? "bg-black bg-opacity-70" : "bg-gray-100 bg-opacity-10"
       }`}
     >
