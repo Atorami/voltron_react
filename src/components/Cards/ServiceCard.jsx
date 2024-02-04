@@ -1,31 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import CardButton from "../Buttons/CardButton";
 
-export default function ServiceCard({ bg, title, description, theme }) {
-  const cardStyle = {
+export default function ServiceCard({ bg, title, description, theme, size }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const overlayStyle = {
+    backgroundColor: "rgba(0, 0, 0, 0.3)",
+  };
+
+  const innerContainerStyle = {
     backgroundImage: `url(${bg})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-  };
-
-  const overlayStyle = {
-    // backgroundColor:
-    //   theme === "red" ? "rgba(255, 0, 0, 0.8)" : "rgba(0, 0, 255, 0.8)",
-    backgroundColor: "rgba(0,0,0,0.3)",
+    transition: "width 0.3s, height 0.3s",
+    width: isHovered ? "120%" : "100%",
+    height: isHovered ? "120%" : "100%",
   };
 
   return (
     <div
-      className="min-w-[300px] h-[400px] overflow-hidden shadow-lg mx-10 relative rounded-tl-xl"
-      style={cardStyle}
+      className="min-w-[300px] h-[400px] overflow-hidden shadow-xl mx-10 rounded-tl-xl relative"
+      onMouseOver={() => setIsHovered(true)}
+      onMouseOut={() => setIsHovered(false)}
     >
       <div className="flex flex-col justify-end h-full">
         <div
           className="h-full w-full bg-black absolute"
           style={overlayStyle}
         ></div>
-        <span className="w-full h-[1.5px] bg-white z-10 mx-28"></span>
-        <div className="flex flex-row justify-between items-center px-4">
+        <div className="inner-container" style={innerContainerStyle}></div>
+        <span className="w-full h-[1.5px] bg-white z-10 mx-28 absolute mb-16"></span>
+        <div className="w-full flex flex-row justify-between items-center px-4 absolute">
           <CardButton />
           <h5 className="text-white text-2xl font-bold p-4 z-10 text-right">
             PLC

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 import logo from "../../assets/img/Voltron_logo.png";
 
 const Header = () => {
@@ -18,6 +19,10 @@ const Header = () => {
     };
   }, []);
 
+  // navigationArr.map((el, index) => (
+  //   console.log(el.toLowerCase)
+  // )
+
   return (
     <header
       className={`fixed h-[80px] w-full z-10 px-16 py-5 flex flex-row justify-between items-center transition-all duration-300 ${
@@ -36,14 +41,21 @@ const Header = () => {
         <nav>
           <ul className="w-full flex flex-row justify-between text-white">
             {navigationArr.map((el, index) => (
-              <li key={index} className="pr-10 text-xl font-normal">
-                <a
-                  href="#"
-                  className=" hover:font-bold transition-all duration-100 ease-linear"
-                >
-                  {el}
-                </a>
-              </li>
+              <ScrollLink
+                to={el.toLowerCase()}
+                smooth={true}
+                duration={500}
+                key={index}
+              >
+                <li key={index} className="pr-10 text-xl font-normal">
+                  <a
+                    href="#"
+                    className="w-full hover:font-bold transition-all duration-100 ease-linear"
+                  >
+                    {el}
+                  </a>
+                </li>
+              </ScrollLink>
             ))}
           </ul>
         </nav>

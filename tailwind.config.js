@@ -6,7 +6,11 @@ export default {
   ],
   theme: {
     colors: { title_red: "#FE0000", title_blue: "#2196F3" },
-    extend: {},
+    extend: {
+      fontFamily: {
+        popponi: ["Popponi", "sans-serif"],
+      },
+    },
   },
   plugins: [require("flowbite/plugin")],
 };

@@ -6,14 +6,14 @@ import Stats from "./Stats/Stats";
 const About = () => {
   return (
     <section
-      id="about"
+      id="about us"
       className="h-[100vh] overflow-hidden bg-white flex flex-col justify-between"
     >
-      <div className="container mx-auto">
-        <h2 className="text-3xl lg:text-4xl font-extrabold pt-20 underline underline-offset-8 text-right">
-          About Us
+      <div className="container mx-auto lg:container-lg">
+        <h2 className="text-3xl lg:text-4xl font-extrabold pt-20 text-right font-popponi">
+          <span className="text-6xl text-gray-400 border-2 p-1">A</span>bout Us
         </h2>
-        <div className="flex flex-row">
+        <div className="flex flex-row ">
           <Fade left duration={2000} delay={200}>
             {" "}
             <div className="md:w-1/2 px-16 relative">
