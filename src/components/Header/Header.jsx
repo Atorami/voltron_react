@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/img/Voltron_logo.png";
 
 const Header = () => {
   const navigationArr = ["Home", "About Us", "Services", "Contact"];
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setScrolled(scrollPosition > window.innerHeight);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="fixed h-[80px] w-full z-10 bg-gray-100 bg-opacity-10">
+    <header
+      className={`fixed h-[80px] w-full z-10 px-16 py-5 flex flex-row justify-between items-center ${
+        scrolled ? "bg-black bg-opacity-70" : "bg-gray-100 bg-opacity-10"
+      }`}
+    >
       <div className="w-full h-full px-16 py-5 flex flex-row justify-between items-center">
         <img
           src={logo}
