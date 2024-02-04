@@ -17,12 +17,12 @@ const Promo = () => {
 
   return (
     <section className="bg-white h-[2000px] pt-20">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto">
         <h2 className="text-3xl lg:text-4xl font-extrabold mb-6">We offer</h2>
         <div className="offer-list">
           <div className="offer__industrial">
             <h4 className="text-4xl font-semibold py-20 text-title_blue">
-              Industrial
+              Industrial service
             </h4>
             <div className="flex">
               <div className="offer__industrial__left w-1/2 rounded-r rounded-3xl overflow-hidden ">
