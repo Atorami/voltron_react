@@ -23,11 +23,12 @@ const Hero = () => {
           <span className="">Electrical</span> and{" "}
           <span className="">Automation</span>
         </h2>
-        <Button className="" title="Explore our services" />
+        <ScrollLink to="service" smooth={true} duration={500}>
+          <Button className="" title="Explore our services" />
+        </ScrollLink>
+
         <ScrollLink
           to="about"
-          smooth={true}
-          duration={500}
           className="absolute bottom-10 text-white cursor-pointer"
         >
           <div className="bg-white bg-opacity-20 rounded-full p-2">

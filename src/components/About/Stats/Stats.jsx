@@ -28,7 +28,7 @@ const Stats = () => {
           targetData.yearsOnMarket
         ),
       }));
-    }, 50);
+    }, 100);
 
     return () => clearInterval(interval);
   }, []);
