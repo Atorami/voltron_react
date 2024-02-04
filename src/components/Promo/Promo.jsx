@@ -27,7 +27,7 @@ const Promo = () => {
   ];
 
   return (
-    <section className="bg-white h-[1900px] pt-28" id="services">
+    <section className="bg-white h-[1800px] pt-28" id="services">
       <div className="container mx-auto">
         <h2 className="text-3xl lg:text-4xl font-extrabold font-popponi text-right">
           <span className="text-6xl text-gray-400 border-2 p-1">W</span>e offer
