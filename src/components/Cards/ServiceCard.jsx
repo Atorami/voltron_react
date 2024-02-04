@@ -1,4 +1,5 @@
 import React from "react";
+import CardButton from "../Buttons/CardButton";
 
 export default function ServiceCard({ bg, title, description, theme }) {
   const cardStyle = {
@@ -24,9 +25,12 @@ export default function ServiceCard({ bg, title, description, theme }) {
           style={overlayStyle}
         ></div>
         <span className="w-full h-[1.5px] bg-white z-10 mx-28"></span>
-        <h5 className="text-white text-2xl font-bold p-4 z-10 text-right">
-          PLC
-        </h5>
+        <div className="flex flex-row justify-between items-center px-4">
+          <CardButton />
+          <h5 className="text-white text-2xl font-bold p-4 z-10 text-right">
+            PLC
+          </h5>
+        </div>
       </div>
       <div className="p-4">
         <div className="text-white">

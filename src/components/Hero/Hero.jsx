@@ -30,6 +30,8 @@ const Hero = () => {
         <ScrollLink
           to="about"
           className="absolute bottom-10 text-white cursor-pointer"
+          smooth={true}
+          duration={500}
         >
           <div className="bg-white bg-opacity-20 rounded-full p-2">
             <svg
