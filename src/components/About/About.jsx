@@ -7,28 +7,28 @@ const About = () => {
   return (
     <section
       id="about us"
-      className="h-[100vh] overflow-hidden bg-white flex flex-col justify-between"
+      className="h-[1500px] lg:h-[100vh] overflow-hidden bg-gray-100 lg:bg-white flex flex-col justify-between"
     >
-      <div className="container mx-auto lg:container-lg">
-        <h2 className="text-3xl lg:text-4xl font-extrabold pt-20 text-right font-popponi">
+      <div className="container mx-auto lg:container">
+        <h2 className="text-4xl lg:text-4xl font-extrabold pt-10 lg:pt-20 lg:text-right font-popponi px-10 lg:px-0">
           <span className="text-6xl text-gray-400 border-2 p-1">A</span>bout Us
         </h2>
-        <div className="flex flex-row ">
+        <div className="flex flex-col lg:flex-row pt-8 lg:pt-0">
           <Fade left duration={2000} delay={200}>
             {" "}
-            <div className="md:w-1/2 px-16 relative">
+            <div className="w-full md:w-1/2 px-16 relative">
               <img
                 src={bg_img_about}
                 alt=""
-                className="rounded-r rounded-3xl shadow-md"
+                className="w-full h-auto rounded-r rounded-3xl shadow-md"
               />
             </div>
           </Fade>
 
-          <div className="mt-16">
+          <div className="mt-6 lg:mt-16">
             <Fade right duration={2000}>
               {" "}
-              <div className="flex flex-col  w-1/2 absolute bg-white shadow-xl rounded-l rounded-3xl p-6 right-40">
+              <div className="flex flex-col w-full lg:w-1/2 absolute bg-white shadow-xl rounded-tr rounded-xl lg:rounded-l lg:rounded-3xl p-6 lg:right-40">
                 <p className="text-xl">
                   Welcome to{" "}
                   <span className="text-2xl font-semibold">Voltron</span>, your

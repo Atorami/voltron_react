@@ -34,13 +34,13 @@ const Stats = () => {
   }, []);
 
   return (
-    <section className="h-[200px] bg-gray-100 py-16">
+    <section className="h-[200px] bg-gray-100 py-16 px-24 lg:px-24">
       <div className="container mx-auto text-center">
         <div className="flex justify-center gap-8">
           {/* Projects */}
           <div className="flex flex-col items-center">
             <div>
-              <span className="text-5xl font-bold">
+              <span className="text-4xl lg:text-5xl font-bold">
                 {animatedValues.projects}
               </span>
               <p>Projects Completed</p>
@@ -50,7 +50,7 @@ const Stats = () => {
           {/* Clients */}
           <div className="flex flex-col items-center">
             <div>
-              <span className="text-5xl font-bold">
+              <span className="text-4xl lg:text-5xl font-bold">
                 {animatedValues.clients}
               </span>
               <p>Clients Served</p>
@@ -59,7 +59,7 @@ const Stats = () => {
 
           <div className="flex flex-col items-center">
             <div>
-              <span className="text-5xl font-bold">
+              <span className="text-4xl lg:text-5xl font-bold">
                 {animatedValues.partners}
               </span>
               <p>Partnerships Established</p>
@@ -68,7 +68,7 @@ const Stats = () => {
 
           <div className="flex flex-col items-center">
             <div>
-              <span className="text-5xl font-bold">
+              <span className="text-4xl lg:text-5xl font-bold">
                 {Math.floor(animatedValues.yearsOnMarket)}
                 {animatedValues.yearsOnMarket >= targetData.yearsOnMarket &&
                   "+"}
