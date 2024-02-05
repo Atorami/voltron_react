@@ -10,7 +10,7 @@ This website is developed with React for a seamless user experience and styled w
 
 ### Gh-pages:
 
-[![Link](https://img.shields.io/badge/Link-%20Employee_app-blue?style=flat&logo=link&logoColor=white)](https://atorami.github.io/voltron_react/)
+[![Link](https://img.shields.io/badge/Link-%20Voltron-blue?style=flat&logo=link&logoColor=white)](https://atorami.github.io/voltron_react/)
 
 ### Key Features:
 
