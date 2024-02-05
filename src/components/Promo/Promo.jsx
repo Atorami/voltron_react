@@ -13,9 +13,6 @@ import marineImg5 from "../../assets/img/marine/5.png";
 import marineImg6 from "../../assets/img/marine/6.png";
 import marineImg7 from "../../assets/img/marine/7.png";
 import marineImg8 from "../../assets/img/marine/8.png";
-
-import industrialBg from "../../assets/img/industrial_bg.png";
-import marineBg from "../../assets/img/marine_bg.png";
 import ServiceCard from "../Cards/ServiceCard";
 
 const Promo = () => {
@@ -27,9 +24,9 @@ const Promo = () => {
   ];
 
   return (
-    <section className="bg-white h-[1800px] pt-28" id="services">
+    <section className="bg-white py-10 pt-10 lg:pt-28" id="services">
       <div className="container mx-auto">
-        <h2 className="text-3xl lg:text-4xl font-extrabold font-popponi text-right">
+        <h2 className="text-3xl lg:text-4xl font-extrabold font-popponi text-left lg:text-right">
           <span className="text-6xl text-gray-400 border-2 p-1">W</span>e offer
         </h2>
         <div className="offer-list">
@@ -37,11 +34,10 @@ const Promo = () => {
             <h4 className="text-4xl font-semibold font-popponi pt-10 text-title_red border-b border-gray-300 mb-5">
               Industrial service
             </h4>
-            <div className="flex flex-row pt-5">
-              <ServiceCard bg={industrialImg1}></ServiceCard>
-              <ServiceCard bg={industrialImg2}></ServiceCard>
-              <ServiceCard bg={industrialImg3}></ServiceCard>
-              <ServiceCard bg={industrialImg4}></ServiceCard>
+            <div className="grid gap-5 sm:grid-cols-2 sm:grid-rows-2 lg:flex lg:flex-row">
+              {imageArr.map((bg, index) => (
+                <ServiceCard key={index} bg={bg}></ServiceCard>
+              ))}
             </div>
           </div>
 
@@ -49,17 +45,19 @@ const Promo = () => {
             <h4 className="text-4xl font-semibold pt-10 text-title_blue border-b border-gray-300 mb-5">
               Marine service
             </h4>
-            <div className="flex overflow-hidden pt-5">
-              <ServiceCard bg={marineImg1}></ServiceCard>
-              <ServiceCard bg={marineImg2}></ServiceCard>
-              <ServiceCard bg={marineImg3}></ServiceCard>
-              <ServiceCard bg={marineImg4}></ServiceCard>
+            <div className="grid gap-5 sm:grid-cols-2 lg:flex lg:flex-row">
+              {[marineImg1, marineImg2, marineImg3, marineImg4].map(
+                (bg, index) => (
+                  <ServiceCard key={index} bg={bg}></ServiceCard>
+                )
+              )}
             </div>
-            <div className="flex flex-row mt-24">
-              <ServiceCard bg={marineImg5}></ServiceCard>
-              <ServiceCard bg={marineImg6}></ServiceCard>
-              <ServiceCard bg={marineImg7}></ServiceCard>
-              <ServiceCard bg={marineImg8}></ServiceCard>
+            <div className="grid gap-5 sm:grid-cols-2 lg:flex lg:flex-row mt-5">
+              {[marineImg5, marineImg6, marineImg7, marineImg8].map(
+                (bg, index) => (
+                  <ServiceCard key={index} bg={bg}></ServiceCard>
+                )
+              )}
             </div>
           </div>
         </div>
