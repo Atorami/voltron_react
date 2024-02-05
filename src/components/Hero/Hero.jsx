@@ -5,7 +5,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Hero = () => {
   return (
-    <section className="relative h-[100vh] overflow-hidden">
+    <section className="w-full relative h-screen overflow-hidden" id="home">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -14,12 +14,12 @@ const Hero = () => {
         }}
       ></div>
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-      <div className="relative flex flex-col justify-center items-center h-full text-white px-16">
-        <h1 className="text-8xl pb-4 text-center">
+      <div className="relative flex flex-col justify-center items-center h-full text-white px-4 sm:px-8">
+        <h1 className="text-5xl sm:text-8xl pb-2 sm:pb-4 text-center">
           <span className="text-title_blue font-semibold">Marine</span> & {""}
           <span className="text-title_red font-semibold">Industrial</span>{" "}
         </h1>
-        <h2 className="text-4xl pb-16 text-center">
+        <h2 className="text-2xl sm:text-4xl pb-8 sm:pb-16 text-center">
           <span className="">Electrical</span> and{" "}
           <span className="">Automation</span>
         </h2>
@@ -29,7 +29,7 @@ const Hero = () => {
 
         <ScrollLink
           to="about us"
-          className="absolute bottom-10 text-white cursor-pointer"
+          className="absolute bottom-5 sm:bottom-10 text-white cursor-pointer"
           smooth={true}
           duration={500}
         >

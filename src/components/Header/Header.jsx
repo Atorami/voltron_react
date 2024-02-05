@@ -5,6 +5,7 @@ import logo from "../../assets/img/Voltron_logo.png";
 const Header = () => {
   const navigationArr = ["Home", "About Us", "Services", "Contact"];
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,26 +20,51 @@ const Header = () => {
     };
   }, []);
 
-  // navigationArr.map((el, index) => (
-  //   console.log(el.toLowerCase)
-  // )
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header
-      className={`fixed h-[80px] w-full z-10 px-16 py-5 flex flex-row justify-between items-center transition-all duration-300 ${
+      className={`fixed h-[80px] w-full z-10 px-4 sm:px-8 py-3 sm:py-5 flex flex-row justify-between items-center transition-all duration-300 ${
         scrolled ? "bg-black bg-opacity-70" : "bg-gray-100 bg-opacity-10"
       }`}
     >
-      <div className="w-full h-full px-16 py-5 flex flex-row justify-between items-center">
+      <div className="w-full h-full px-4 sm:px-8 py-3 sm:py-5 flex flex-row justify-between items-center transition-all duration-300">
         <img
           src={logo}
           alt="Voltron"
-          className="h-16 opacity-85"
+          className="h-12 sm:h-16 opacity-85"
           style={{
             filter: "invert(1)",
           }}
         />
-        <nav>
+
+        {/* Burger menu for mobile screens */}
+        <div
+          className={`block sm:hidden cursor-pointer z-30 transition-transform ${
+            isMenuOpen ? "transform rotate-90 translate-y-1" : ""
+          }`}
+          onClick={toggleMenu}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+            />
+          </svg>
+        </div>
+
+        {/* Navigation for medium and large screens */}
+        <nav className="hidden sm:flex">
           <ul className="w-full flex flex-row justify-between text-white">
             {navigationArr.map((el, index) => (
               <ScrollLink
@@ -47,7 +73,7 @@ const Header = () => {
                 duration={500}
                 key={index}
               >
-                <li key={index} className="pr-10 text-xl font-normal">
+                <li key={index} className="pr-6 sm:pr-10 text-xl font-normal">
                   <a
                     href="#"
                     className="w-full hover:font-bold transition-all duration-100 ease-linear"
@@ -60,6 +86,23 @@ const Header = () => {
           </ul>
         </nav>
       </div>
+      {/* Mobile menu */}
+      {isMenuOpen && (
+        <div className="sm:hidden pt-16 fixed inset-0 bg-black bg-opacity-70 z-20">
+          <div className="flex flex-col items-center">
+            {navigationArr.map((el, index) => (
+              <ScrollLink
+                to={el.toLowerCase()}
+                smooth={true}
+                duration={500}
+                key={index}
+              >
+                <a className="text-white py-4 mb-10 text-2xl">{el}</a>
+              </ScrollLink>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 };

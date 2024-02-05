@@ -8,7 +8,7 @@ import Contact from "./components/Contact/Contact";
 
 export default function App() {
   return (
-    <div className="bg-white font-popponi">
+    <div className="bg-white font-popponi overflow-hidden">
       <Header />
       <Hero />
       <About />
