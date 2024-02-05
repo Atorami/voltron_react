@@ -4,19 +4,19 @@ import ContactForm from "./ContactComponents/ContactForm/ContactForm";
 
 const Contact = () => {
   return (
-    <section className="bg-gray-100 h-[700px]" id="contact">
+    <section className="bg-gray-100 lg:h-[700px]" id="contact">
       <div className="container mx-auto">
         <h2 className="text-3xl lg:text-4xl font-extrabold font-popponi text-left pt-14">
           <span className="text-6xl text-gray-400 border-2 p-1">G</span>et in
           touch!
         </h2>
-        <div className="flex px-16 py-10">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row px-16 py-10">
+          <div className="w-full lg:w-1/2">
             <ContactForm />
           </div>
-          <div className="w-1/2">
-            <div className="h-[150px] flex flex-row justify-between bg-white py-10 px-4">
-              <div className="">
+          <div className="w-full lg:w-1/2">
+            <div className="lg:h-[150px] flex flex-col lg:flex-row justify-between bg-white py-10 px-4">
+              <div className="mb-5 lg:mb-0">
                 <div className="flex flex-row">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const Contact = () => {
                   <br /> Szczecin, 71-222
                 </p>
               </div>
-              <div className="">
+              <div className="mb-5 lg:mb-0">
                 <div className="flex flex-row">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ const Contact = () => {
                   Mobile 2: <a href="tel:+4888888889">+(48)888-888-889</a>
                 </p>
               </div>
-              <div className="mr-10">
+              <div className="lg:mr-10">
                 <div className="flex flex-row">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
