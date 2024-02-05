@@ -12,7 +12,7 @@ const Footer = () => {
               <img src={logo} alt="Voltron" />
             </a>
           </div>
-          <div className="flex flex-col lg:flex-row justify-between items-center pt-4">
+          <div className="flex flex-col lg:flex-row lg:justify-between items-center pt-4">
             <p>© 2024 Voltron. All rights reserved.</p>
             <p>
               Created by <a href="#"> AM </a>

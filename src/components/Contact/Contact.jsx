@@ -10,11 +10,11 @@ const Contact = () => {
           <span className="text-6xl text-gray-400 border-2 p-1">G</span>et in
           touch!
         </h2>
-        <div className="flex flex-col lg:flex-row px-16 py-10">
-          <div className="w-full lg:w-1/2">
+        <div className="flex flex-col lg:flex-row lg:px-16 py-10">
+          <div className="w-full lg:w-1/2 px-2 lg:px-0">
             <ContactForm />
           </div>
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 px-2 lg:px-0">
             <div className="lg:h-[150px] flex flex-col lg:flex-row justify-between bg-white py-10 px-4">
               <div className="mb-5 lg:mb-0">
                 <div className="flex flex-row">
