@@ -10,7 +10,7 @@ const About = () => {
       className="h-[1500px] lg:h-[100vh] overflow-hidden bg-gray-100 lg:bg-white flex flex-col justify-between"
     >
       <div className="container mx-auto lg:container">
-        <h2 className="text-4xl lg:text-4xl font-extrabold pt-10 lg:pt-20 lg:text-right font-popponi px-10 lg:px-0">
+        <h2 className="text-4xl lg:text-4xl font-extrabold pt-10 lg:pt-20 lg:text-right font-popponi px-2">
           <span className="text-6xl text-gray-400 border-2 p-1">A</span>bout Us
         </h2>
         <div className="flex flex-col lg:flex-row pt-8 lg:pt-0">

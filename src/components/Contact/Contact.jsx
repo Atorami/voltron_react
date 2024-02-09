@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section className="bg-gray-100 lg:h-[700px]" id="contact">
       <div className="container mx-auto">
-        <h2 className="text-3xl lg:text-4xl font-extrabold font-popponi text-left pt-14">
+        <h2 className="text-3xl lg:text-4xl font-extrabold font-popponi text-left pt-14 px-2">
           <span className="text-6xl text-gray-400 border-2 p-1">G</span>et in
           touch!
         </h2>

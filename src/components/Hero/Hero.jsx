@@ -29,7 +29,7 @@ const Hero = () => {
 
         <ScrollLink
           to="about us"
-          className="absolute bottom-5 sm:bottom-16 md:bottom-14 text-white cursor-pointer"
+          className="absolute bottom-10 text-white cursor-pointer"
           smooth={true}
           duration={500}
         >
