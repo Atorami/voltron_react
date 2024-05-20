@@ -5,10 +5,12 @@ import About from "./components/About/About";
 import Promo from "./components/Promo/Promo";
 import Footer from "./components/Footer/Footer";
 import Contact from "./components/Contact/Contact";
+import { BrowserRouter } from "react-router-dom";
 
 export default function App() {
   return (
-    <div className="bg-white font-popponi overflow-hidden">
+    <BrowserRouter>
+     <div className="bg-white font-popponi overflow-hidden">
       <Header />
       <Hero />
       <About />
@@ -16,5 +18,7 @@ export default function App() {
       <Contact />
       <Footer />
     </div>
+    </BrowserRouter>
+   
   );
 }

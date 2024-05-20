@@ -10,6 +10,9 @@ export default {
       fontFamily: {
         popponi: ["Popponi", "sans-serif"],
       },
+      screens:{
+        'laptop':'1024px'
+      }
     },
   },
   plugins: [require("flowbite/plugin")],

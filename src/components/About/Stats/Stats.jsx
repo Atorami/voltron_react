@@ -34,7 +34,7 @@ const Stats = () => {
   }, []);
 
   return (
-    <section className="h-[200px] bg-gray-100 py-16 px-24 lg:px-24">
+    <section className="bg-gray-100 laptop:py-10 laptop:my-10 xl:py-16 px-24 lg:px-24">
       <div className="container mx-auto text-center">
         <div className="flex justify-center gap-8">
           {/* Projects */}

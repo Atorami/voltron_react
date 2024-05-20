@@ -23,6 +23,9 @@ const Promo = () => {
     industrialImg4,
   ];
 
+  const titlesIndustrial = ['Automated lines', 'Energy systems','PLC', 'Control and power cabinets'];
+  const titlesMarine = ['Engine room services', 'Power, automation and control systems', 'Hull and deck installations', 'Live saving applianges', 'Fire fighting equipment', 'Inspections, calibrations and measurements','Distress and safety systems', 'Communication and networking equipment']
+
   return (
     <section className="bg-white py-10 pt-10 lg:pt-28" id="services">
       <div className="container mx-auto px-2">
@@ -34,9 +37,9 @@ const Promo = () => {
             <h4 className="text-4xl text-center xl:text-left font-semibold font-popponi pt-10 text-title_red border-b border-gray-300 mb-10">
               Industrial service
             </h4>
-            <div className="grid gap-5 sm:grid-cols-2 sm:grid-rows-2 lg:flex lg:flex-row">
+            <div className="grid gap-5 sm:grid-cols-2 sm:grid-rows-2 laptop:grid-cols-2 laptop:grid-rows-2 laptop:justify-items-between">
               {imageArr.map((bg, index) => (
-                <ServiceCard key={index} bg={bg}></ServiceCard>
+                <ServiceCard key={index} bg={bg} title={titlesIndustrial[index]}></ServiceCard>
               ))}
             </div>
           </div>
@@ -45,17 +48,10 @@ const Promo = () => {
             <h4 className="text-4xl text-center xl:text-left font-semibold pt-10 text-title_blue border-b border-gray-300 mb-10">
               Marine service
             </h4>
-            <div className="grid gap-5 sm:grid-cols-2 lg:flex lg:flex-row">
-              {[marineImg1, marineImg2, marineImg3, marineImg4].map(
+            <div className="grid gap-5 sm:grid-cols-2 laptop:grid-cols-2 laptop:grid-rows-4">
+              {[marineImg1, marineImg2, marineImg3, marineImg4, marineImg5, marineImg6, marineImg7, marineImg8].map(
                 (bg, index) => (
-                  <ServiceCard key={index} bg={bg}></ServiceCard>
-                )
-              )}
-            </div>
-            <div className="grid gap-5 sm:grid-cols-2 lg:flex lg:flex-row mt-5">
-              {[marineImg5, marineImg6, marineImg7, marineImg8].map(
-                (bg, index) => (
-                  <ServiceCard key={index} bg={bg}></ServiceCard>
+                  <ServiceCard key={index} bg={bg} title={titlesMarine[index]}></ServiceCard>
                 )
               )}
             </div>

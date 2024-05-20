@@ -1,21 +1,19 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import CardButton from "../Buttons/CardButton";
+import Page from "../Page/Page";
 
-export default function ServiceCard({ bg, title, description, theme, size }) {
+export default function ServiceCard({ bg, title, description, size }) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const overlayStyle = {
-    backgroundColor: "rgba(0, 0, 0, 0.3)",
-  };
-
-  const innerContainerStyle = {
+  const cardBgStyle = {
     backgroundImage: `url(${bg})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    transition: "width 0.3s, height 0.3s",
-    width: isHovered ? "120%" : "100%",
-    height: isHovered ? "120%" : "100%",
+    transition: "transform 0.3s",
+    transform: isHovered ? "scale(1.1)" : "scale(1.0)",
   };
+
 
   return (
     <div
@@ -24,24 +22,25 @@ export default function ServiceCard({ bg, title, description, theme, size }) {
       onMouseOut={() => setIsHovered(false)}
     >
       <div className="flex flex-col justify-end h-full">
-        <div
-          className="h-full w-full bg-black absolute"
-          style={overlayStyle}
-        ></div>
-        <div className="inner-container" style={innerContainerStyle}></div>
-        <span className="w-full h-[1.5px] bg-white z-10 mx-28 absolute mb-16"></span>
-        <div className="w-full flex flex-row justify-between items-center px-4 absolute">
-          <CardButton />
-          <h5 className="text-white text-2xl font-bold p-4 z-10 text-right">
-            PLC
-          </h5>
+        <div className="absolute w-full h-full" style={cardBgStyle}></div>
+        <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-center px-4 laptop:px-20 py-8 relative z-10">
+          <span className="h-[1.5px] bg-white mb-6"></span>
+          <div className="w-full flex flex-col justify-between items-center laptop:px-4">
+            <h5 className="text-white text-center text-2xl font-bold mb-4">
+              {title}
+            </h5>
+            <Link to={Page}>
+              <CardButton />
+            </Link>
+          </div>
+          <span className="h-[1.5px] bg-white mt-6"></span>
         </div>
       </div>
       <div className="p-4">
         <div className="text-white">
-          {/* {description.map((item, index) => (
+          {description && description.map((item, index) => (
             <p key={index}>{item}</p>
-          ))} */}
+          ))}
         </div>
       </div>
     </div>
