@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";
 import logo from "../../assets/img/Voltron_logo.png";
 
 const Header = () => {
@@ -31,6 +32,7 @@ const Header = () => {
       }`}
     >
       <div className="w-full h-full px-4 sm:px-8 py-3 sm:py-5 flex flex-row justify-between items-center transition-all duration-300">
+        <Link to="/">
         <img
           src={logo}
           alt="Voltron"
@@ -39,6 +41,8 @@ const Header = () => {
             filter: "invert(1)",
           }}
         />
+        </Link>
+       
 
         {/* Burger menu for mobile screens */}
         <div
@@ -66,23 +70,17 @@ const Header = () => {
         {/* Navigation for medium and large screens */}
         <nav className="hidden sm:flex">
           <ul className="w-full flex flex-row justify-between text-white">
-            {navigationArr.map((el, index) => (
-              <ScrollLink
-                to={el.toLowerCase()}
-                smooth={true}
-                duration={500}
-                key={index}
-              >
-                <li key={index} className="pr-6 sm:pr-10 text-xl font-normal">
-                  <a
-                    href="#"
-                    className="w-full hover:font-bold transition-all duration-100 ease-linear"
-                  >
-                    {el}
-                  </a>
-                </li>
-              </ScrollLink>
-            ))}
+          {navigationArr.map((el, index) => (
+  <li key={index} className="pr-6 sm:pr-10 text-xl font-normal cursor-pointer">
+    <ScrollLink
+      to={el.toLowerCase()}
+      smooth={true}
+      duration={500}
+    >
+      {el}
+    </ScrollLink>
+  </li>
+))}
           </ul>
         </nav>
       </div>

@@ -1,30 +1,18 @@
-import React from "react";
-import OfferCard from "../Cards/OfferCard";
-import industrialImg1 from "../../assets/img/industrial/1.png";
-import industrialImg2 from "../../assets/img/industrial/2.png";
-import industrialImg3 from "../../assets/img/industrial/3.png";
-import industrialImg4 from "../../assets/img/industrial/4.png";
-
-import marineImg1 from "../../assets/img/marine/1.png";
-import marineImg2 from "../../assets/img/marine/2.png";
-import marineImg3 from "../../assets/img/marine/3.png";
-import marineImg4 from "../../assets/img/marine/4.png";
-import marineImg5 from "../../assets/img/marine/5.png";
-import marineImg6 from "../../assets/img/marine/6.png";
-import marineImg7 from "../../assets/img/marine/7.png";
-import marineImg8 from "../../assets/img/marine/8.png";
+import React, { useState, useEffect } from "react";
 import ServiceCard from "../Cards/ServiceCard";
 
 const Promo = () => {
-  const imageArr = [
-    industrialImg1,
-    industrialImg2,
-    industrialImg3,
-    industrialImg4,
-  ];
+  const [servicesData, setServicesData] = useState(null);
 
-  const titlesIndustrial = ['Automated lines', 'Energy systems','PLC', 'Control and power cabinets'];
-  const titlesMarine = ['Engine room services', 'Power, automation and control systems', 'Hull and deck installations', 'Live saving applianges', 'Fire fighting equipment', 'Inspections, calibrations and measurements','Distress and safety systems', 'Communication and networking equipment']
+  useEffect(() => {
+    fetch("/db.json")
+      .then((response) => response.json())
+      .then((data) => setServicesData(data));
+  }, []);
+
+  if (!servicesData) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <section className="bg-white py-10 pt-10 lg:pt-28" id="services">
@@ -38,8 +26,14 @@ const Promo = () => {
               Industrial service
             </h4>
             <div className="grid gap-5 sm:grid-cols-2 sm:grid-rows-2 laptop:grid-cols-2 laptop:grid-rows-2 laptop:justify-items-between">
-              {imageArr.map((bg, index) => (
-                <ServiceCard key={index} bg={bg} title={titlesIndustrial[index]}></ServiceCard>
+              {servicesData.Industrial.map((service, index) => (
+                <ServiceCard
+                  key={index}
+                  bg={service.srcImage}
+                  title={service.title}
+                  short={service.short}
+                  description={service.description}
+                />
               ))}
             </div>
           </div>
@@ -49,11 +43,15 @@ const Promo = () => {
               Marine service
             </h4>
             <div className="grid gap-5 sm:grid-cols-2 laptop:grid-cols-2 laptop:grid-rows-4">
-              {[marineImg1, marineImg2, marineImg3, marineImg4, marineImg5, marineImg6, marineImg7, marineImg8].map(
-                (bg, index) => (
-                  <ServiceCard key={index} bg={bg} title={titlesMarine[index]}></ServiceCard>
-                )
-              )}
+              {servicesData.Marine.map((service, index) => (
+                <ServiceCard
+                  key={index}
+                  bg={service.srcImage}
+                  title={service.title}
+                  short={service.short}
+                  description={service.description}
+                />
+              ))}
             </div>
           </div>
         </div>

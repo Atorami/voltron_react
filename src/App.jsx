@@ -1,24 +1,19 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Promo from "./components/Promo/Promo";
 import Footer from "./components/Footer/Footer";
-import Contact from "./components/Contact/Contact";
-import { BrowserRouter } from "react-router-dom";
+import ServicePage from "./pages/ServicePage"
+import HomePage from "./pages/HomePage";
 
 export default function App() {
   return (
-    <BrowserRouter>
-     <div className="bg-white font-popponi overflow-hidden">
+    <div className="bg-white font-popponi overflow-hidden">
       <Header />
-      <Hero />
-      <About />
-      <Promo />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/services/:serviceTitle" element={<ServicePage />} />
+      </Routes>
       <Footer />
     </div>
-    </BrowserRouter>
-   
   );
 }

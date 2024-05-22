@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="w-full flex flex-col xl:flex-row xl:justify-between items-center pt-4">
             <p>© 2024 Voltron. All rights reserved.</p>
             <p>
-              Created by <a href="#"> AM </a>
+              Created by <a href="https://linkedin.com/in/anton-martsinkevich"> AM </a>
             </p>
           </div>
         </div>

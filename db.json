@@ -1,0 +1,91 @@
+
+  {
+    "Industrial": [
+      {
+        "id": 1,
+        "short": "automated-lines",
+        "title": "Automated lines",
+        "description": "At Marine and Industrial Electrical and Automation, we design and implement automated lines that enhance manufacturing efficiency and consistency. Our automated lines integrate cutting-edge technology to streamline production processes, optimize resource utilization, and minimize human intervention. With our expertise in industrial automation, we ensure that each automated line meets the specific requirements of our clients, delivering reliable performance and maximizing productivity. Whether it's assembly lines, conveyor systems, or robotic solutions, we tailor our automated solutions to suit diverse industries and applications. From conceptualization to installation and maintenance, we provide end-to-end solutions for automated lines, empowering businesses to achieve greater efficiency and competitiveness in today's dynamic market landscape.",
+        "srcImage": "/src/assets/img/industrial/1.png"
+      },
+      {
+        "id": 2,
+        "short": "energy-systems",
+        "title": "Energy systems",
+        "description": "Our comprehensive energy systems are designed to meet the diverse needs of industrial settings, providing reliable power generation, distribution, and management solutions. Leveraging advanced technologies and sustainable practices, we ensure efficient utilization of resources and optimal performance in demanding environments. Whether it's traditional power plants, renewable energy installations, or smart grid solutions, our energy systems are tailored to enhance operational efficiency, reduce costs, and minimize environmental impact. With a focus on innovation and reliability, we empower industries to achieve sustainable growth and resilience in today's energy landscape.",
+        "srcImage": "/src/assets/img/industrial/2.png"
+      },
+      {
+        "id": 3,
+        "short": "plc",
+        "title": "PLC",
+        "description": "Our experts specialize in the programming and installation of Programmable Logic Controllers (PLCs) for industrial automation, enabling precise control and monitoring of manufacturing processes. With a deep understanding of PLC technologies and industry requirements, we develop customized solutions that optimize production efficiency, ensure product quality, and minimize downtime. From basic control tasks to complex automation systems, our PLC solutions are designed to adapt to evolving business needs and technological advancements. With our reliable PLC services, businesses can enhance productivity, flexibility, and competitiveness in today's competitive market landscape.",
+        "srcImage": "/src/assets/img/industrial/3.png"
+      },
+      {
+        "id": 4,
+        "short": "control-power-supply-cabinets",
+        "title": "Control and power supply cabinets",
+        "description": "Our control and power supply cabinets are meticulously designed and manufactured to house and manage electrical components for industrial equipment, ensuring optimal performance and safety. With a focus on quality craftsmanship and reliability, we provide customized solutions that meet the specific requirements of diverse applications and industries. Our cabinets incorporate advanced features such as circuit protection, voltage regulation, and remote monitoring capabilities, enabling seamless integration and operation in demanding environments. Whether it's motor control centers, distribution panels, or power distribution units, our cabinets are built to deliver robust performance and longevity, supporting the operational needs of businesses worldwide.",
+        "srcImage": "/src/assets/img/industrial/4.png"
+      }
+    ],
+    "Marine": [
+      {
+        "id": 1,
+        "short": "engine-room-services",
+        "title": "Engine room services",
+        "description": "Marine and Industrial Electrical and Automation offers comprehensive engine room services, including maintenance, repair, and operational support for marine vessels. Our team of skilled technicians and engineers are equipped to handle a wide range of engine room systems and components, ensuring reliable performance and compliance with industry standards. From routine inspections and preventive maintenance to emergency repairs and system upgrades, we provide tailored solutions to meet the unique needs of each vessel. With our expertise and commitment to quality, we help shipowners and operators minimize downtime, optimize fuel efficiency, and enhance the safety and reliability of their fleets.",
+        "srcImage": "/src/assets/img/marine/1.png"
+      },
+      {
+        "id": 2,
+        "short": "power-supply-automation-control-systems",
+        "title": "Power supply, automation and control systems",
+        "description": "Our power supply, automation, and control systems are designed to optimize the performance and efficiency of marine vessels, ensuring reliable operation in challenging maritime environments. Leveraging advanced technologies and industry expertise, we provide integrated solutions that enhance safety, reliability, and energy efficiency onboard ships. From power generation and distribution to propulsion and navigation systems, our solutions are tailored to meet the unique requirements of each vessel type and application. With a focus on innovation and reliability, we empower shipowners and operators to navigate the seas with confidence and peace of mind.",
+        "srcImage": "/src/assets/img/marine/2.png"
+      },
+      {
+        "id": 3,
+        "short": "hull-deck-installations",
+        "title": "Hull and deck installations",
+        "description": "Our team specializes in hull and deck installations for marine vessels, ensuring structural integrity, functionality, and compliance with regulatory standards. With extensive experience and technical expertise, we handle all aspects of the installation process, from planning and design to fabrication and installation. Whether it's outfitting new vessels or retrofitting existing ones, we deliver solutions that meet the highest quality and safety standards. From propulsion systems and auxiliary machinery to accommodation spaces and safety equipment, our installations are built to withstand the rigors of the marine environment and ensure the long-term performance and reliability of the vessel.",
+        "srcImage": "/src/assets/img/marine/3.png"
+      },
+      {
+        "id": 4,
+        "short": "live-saving-appliances",
+        "title": "Live saving appliances",
+        "description": "We supply and maintain a comprehensive range of life-saving appliances for marine vessels, including lifeboats, life vests, and emergency rafts, to ensure the safety and well-being of crew and passengers at sea. Our products are designed and manufactured to meet international safety standards and regulations, providing reliable protection in emergency situations. From regular inspections and maintenance to repairs and replacements, we offer complete lifecycle support for life-saving equipment, ensuring compliance and readiness at all times. With our commitment to safety and quality, we help shipowners and operators navigate the seas with confidence and peace of mind.",
+        "srcImage": "/src/assets/img/marine/4.png"
+      },
+      {
+        "id": 5,
+        "short": "fire-fighting-equipment",
+        "title": "Fire fighting equipment",
+        "description": "Marine and Industrial Electrical and Automation provides a comprehensive range of fire fighting equipment for marine vessels, including fire extinguishers, hoses, pumps, and suppression systems, to protect against fire hazards at sea. Our products are designed and manufactured to meet the stringent requirements of maritime regulations and industry standards, ensuring reliable performance in emergency situations. From installation and commissioning to inspection and maintenance, we offer end-to-end solutions for fire protection onboard ships, helping shipowners and operators mitigate risks and safeguard their assets and crew.",
+        "srcImage": "/src/assets/img/marine/5.png"
+      },
+      {
+        "id": 6,
+        "short": "inspections-calibrations-measurements",
+        "title": "Inspections, calibrations and measurements",
+        "description": "Inspections, calibrations, and measurements are crucial aspects of maintaining maritime equipment in top condition, ensuring safety, reliability, and compliance with regulatory requirements. Our comprehensive inspection services cover a wide range of equipment and systems onboard ships, including propulsion, electrical, and safety systems. With state-of-the-art calibration tools and techniques, we verify the accuracy and performance of critical instruments and sensors, ensuring precise measurements and reliable data. Whether it's routine checks, annual surveys, or emergency inspections, our team of certified technicians and engineers are equipped to handle all inspection tasks efficiently and effectively. With a focus on quality and compliance, we help shipowners and operators navigate the complex regulatory landscape and ensure the safety and reliability of their vessels.",
+        "srcImage": "/src/assets/img/marine/6.png"
+      },
+      {
+        "id": 7,
+        "short": "distress-safety-systems",
+        "title": "Distress and safety systems",
+        "description": "Distress and safety systems are essential components of maritime safety, providing vital communication and signaling capabilities to ensure the prompt detection and response to emergencies at sea. Our advanced distress and safety systems incorporate state-of-the-art technology and industry best practices to enhance situational awareness and facilitate rapid coordination and assistance. From emergency beacons and satellite communication devices to radar transponders and distress signals, our solutions are designed to meet the stringent requirements of international maritime regulations and standards. With a focus on reliability and performance, we help shipowners and operators safeguard their vessels and crew, minimizing risks and enhancing the effectiveness of search and rescue operations.",
+        "srcImage": "/src/assets/img/marine/7.png"
+      },
+      {
+        "id": 8,
+        "short": "communication-networking-equipment",
+        "title": "Communication and networking equipment",
+        "description": "Communication and networking equipment play a critical role in facilitating reliable data exchange and connectivity on marine vessels, enabling seamless communication, navigation, and remote monitoring capabilities. Our cutting-edge communication and networking solutions are designed to meet the unique requirements of maritime operations, providing robust connectivity in challenging maritime environments. From satellite communication systems and VHF radios to AIS transceivers and onboard networks, our solutions ensure reliable data transmission, real-time situational awareness, and efficient fleet management. With a focus on innovation and reliability, we empower shipowners and operators to stay connected and informed, enhancing operational efficiency, safety, and productivity at sea.",
+        "srcImage": "/src/assets/img/marine/8.png"
+      }
+    ]
+  }

@@ -41,8 +41,8 @@ const Contact = () => {
                 </div>
 
                 <p>
-                  st. Name 21/43b
-                  <br /> Szczecin, 71-222
+                    ul. Dubois 20
+                  <br /> Szczecin, 771-610
                 </p>
               </div>
               <div className="mb-5 lg:mb-0">
@@ -66,9 +66,7 @@ const Contact = () => {
                 </div>
 
                 <p>
-                  Mobile 1: <a href="tel:+4888888888">+(48)888-888-888</a>
-                  <br />
-                  Mobile 2: <a href="tel:+4888888889">+(48)888-888-889</a>
+                  <a href="tel:+48 696100155">+48 696-100-155</a>
                 </p>
               </div>
               <div className="lg:mr-10">
