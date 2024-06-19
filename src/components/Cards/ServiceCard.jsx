@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import CardButton from "../Buttons/CardButton";
 
 const ServiceCard = ({ bg, title, description, short }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -31,7 +30,6 @@ const ServiceCard = ({ bg, title, description, short }) => {
               to={`/services/${short}`}
               state={{ bg, title, description }}
             >
-              {/* <CardButton /> */}
             </Link>
           </div>
           <hr className="h-[1px] bg-white mt-6" />
